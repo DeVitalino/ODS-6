@@ -1,0 +1,211 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fcff;
+  color: #0d2a4d;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: #003366;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+header .logo img {
+  width: 28px;
+  margin-right: 10px;
+}
+
+header .search input {
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: #e8f6ff;
+  border-radius: 12px;
+  margin: 1rem 2rem;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text button {
+  background: #003366;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hero img {
+  width: 140px;
+}
+
+/* ================= MISSÕES ================= */
+section {
+  margin: 2rem;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.missoes {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.card {
+  flex: 1;
+  background: #cceeff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 160px; 
+}
+
+
+.card h3 {
+  margin-bottom: .5rem;
+}
+
+#frases {
+  border-right: 2px solid #003366;
+  white-space: normal;
+  word-break: break-word;
+  overflow: hidden;
+  display: inline-block;
+  animation: blinkCursor 0.7s infinite;
+}
+
+
+@keyframes blinkCursor {
+  0% { border-color: transparent; }
+  50% { border-color: #003366; }
+  100% { border-color: transparent; }
+}
+
+
+/* ================= PROJETOS ================= */
+.projetos {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.projetos .img-box {
+  background: #cceeff;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+/* ================= EQUIPE ================= */
+.lista-equipe {
+  list-style: none;
+  margin: 1rem 2rem;
+  padding: 0;
+}
+
+.lista-equipe li {
+  background: #cceeff;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+
+/* ================= FOOTER ================= */
+footer {
+  background: #003366; 
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2); 
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+footer p:hover {
+  opacity: 1;
+}
+
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    margin-top: 1rem;
+    width: 100px;
+  }
+
+  .missoes {
+    flex-direction: column;
+  }
+
+  .projetos {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .projetos .img-box {
+    width: 100%;
+    max-width: 300px;
+    height: 160px;
+  }
+}
