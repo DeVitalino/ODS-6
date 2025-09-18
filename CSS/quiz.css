@@ -1,0 +1,202 @@
+/* ================= CONTAINER ================= */
+#quiz-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= TELAS ================= */
+.hidden { display: none; }
+
+#start-screen input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80%;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+/* ================= BOTÕES ================= */
+button {
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.1s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #0055aa;
+  transform: scale(1.03);
+}
+
+/* ================= RESPOSTAS ================= */
+#answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* espaço entre os botões */
+}
+
+#answers button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* ícone ou número da resposta */
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #003366;
+  background: #e8f6ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#answers button:hover {
+  background: #cceeff;
+  transform: scale(1.02);
+}
+
+/* Resposta correta ou errada */
+.correct {
+  background: #c8f7c5 !important; /* verde */
+  border-color: #3c763d !important;
+  color: #003300 !important;
+}
+
+.wrong {
+  background: #f7c5c5 !important; /* vermelho */
+  border-color: #763d3d !important;
+  color: #330000 !important;
+}
+
+/* ================= BARRA DE TEMPO ================= */
+.timer-bar {
+  position: relative;
+  background: #eee;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+#progress {
+  background: linear-gradient(90deg, red, darkred);
+  height: 100%;
+  width: 100%;
+  transform-origin: left;
+}
+
+@keyframes shrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+/* ================= RANKING ================= */
+#ranking {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#ranking li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* medalha esquerda, nome centro, pontos direita */
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #f1f9ff;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+#ranking li:hover {
+  background: #e0f0ff;
+}
+
+#ranking li .medal {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+#ranking li .player-name {
+  flex-grow: 1;
+  text-align: left;
+}
+
+#ranking li .score {
+  font-weight: bold;
+}
+
+/* Medalhas top 3 */
+.gold { color: #FFD700; }
+.silver { color: #C0C0C0; }
+.bronze { color: #CD7F32; }
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+  #quiz-container {
+    width: 95%;
+    padding: 1.2rem;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+
+  #start-screen input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    width: 100%;
+    padding: 12px;
+  }
+
+  #answers button {
+    font-size: 1rem;
+    padding: 14px;
+  }
+
+  #ranking {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #quiz-container {
+    padding: 1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  #answers button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
