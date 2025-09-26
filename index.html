@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="icon" href="./IMAGES/ODS64px.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
 </head>
 
 <body>
@@ -54,13 +53,8 @@
                 <h3> <i class="fa-duotone fa-solid fa-clock"></i> Economize</i> </h3>
                 <p><span id="frases"></span></p>
             </div>
-      
-            <div class="card">
-                <h3> <i class="fa-duotone fa-solid fa-circle-play"></i> Tutorial</h3>
-                <p>Veja como reutilizar a água da chuva</p>
-            </div>
+                
         </div>
-  
     </section>
   
     <section>
@@ -79,13 +73,53 @@
   
     </section>
 
+    <section id="comentarios">
+
+        <h2>Comentários da comunidade</h2>
+        <form id="comentario-form">
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            <textarea id="mensagem" placeholder="Compartilhe sua ideia ou experiência" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <ul id="lista-comentarios"></ul>
+    </section>
+
+
   <!-- FOOTER -->
   <footer>
+
     <p>&copy; 2025 Projeto ODS 6 - Unijorge</p>
   </footer>
 
 
 <script src="./JS/animacao.js"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyB6r-hKId6W_2nZ7v23zJXLIihCIS2hIXY",
+    authDomain: "ods6-a4985.firebaseapp.com",
+    projectId: "ods6-a4985",
+    storageBucket: "ods6-a4985.firebasestorage.app",
+    messagingSenderId: "655860425857",
+    appId: "1:655860425857:web:847e2ad2d9bab2d6e89980",
+    measurementId: "G-P8NMYJGVV4"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+<script src="./JS/feedback.js"></script>
 
 </body>
 </html>

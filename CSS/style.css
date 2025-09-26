@@ -169,6 +169,23 @@ section h2 {
   border-radius: 10px;
 }
 
+/* ================= VÍDEO ================= */
+
+.video-container {
+  width: 300px;   /* define o tamanho pequeno */
+  height: 170px;  /* proporcional ao 16:9 */
+  overflow: hidden;
+  border-radius: 12px; /* cantos arredondados */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
 /* ================= EQUIPE ================= */
 .lista-equipe {
   list-style: none;
@@ -181,6 +198,111 @@ section h2 {
   margin: 0.5rem 0;
   padding: 0.8rem;
   border-radius: 8px;
+}
+
+
+/* ================= COMENTÁRIOS ================= */
+#comentarios {
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+#comentarios h2 {
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+#comentario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#comentario-form input, 
+#comentario-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+#comentario-form input:focus,
+#comentario-form textarea:focus {
+  border-color: #003366;
+}
+
+#comentario-form button {
+  align-self: flex-end;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #003366;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#comentario-form button:hover {
+  background: #0055aa;
+}
+
+#lista-comentarios {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-comentarios li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f1f9ff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #003366;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.comentario-conteudo {
+  flex: 1;
+}
+
+.comentario-conteudo strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.data {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.like-btn {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #888;
+  transition: color 0.2s;
+  margin-left: 10px;
+}
+
+.like-btn.liked {
+  color: #e6b800; /* dourado */
 }
 
 
