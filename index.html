@@ -29,8 +29,7 @@
 
     <section class="hero">
         <div class="hero-text">
-            <h1>+2 bilhões de pessoas ainda não têm acesso à água potável</h1>
-            <button>Comece sua jornada</button>
+            <p><span id="frases"></span></p>
         </div>
         <img src="https://img.icons8.com/ios-filled/100/4da6ff/water.png" alt="gota">
     </section>
@@ -48,12 +47,7 @@
                     <p>Quanto você sabe sobre o uso da água?</p>
                 </div>
             </a>
-      
-            <div class="card">
-                <h3> <i class="fa-duotone fa-solid fa-clock"></i> Economize</i> </h3>
-                <p><span id="frases"></span></p>
-            </div>
-                
+            
         </div>
     </section>
   
@@ -99,6 +93,8 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+  import { getDatabase, ref, push, onValue, update } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -117,6 +113,9 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+
+  const db = getDatabase(); // Conecta ao Realtime Database
+
 </script>
 
 <script src="./JS/feedback.js"></script>

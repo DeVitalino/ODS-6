@@ -8,7 +8,8 @@ const frases = [
   "Lave o carro com consciência. Use um balde",
   "Água é vida, cuide dela.",
   "Cinco minutos de banho já bastam.",
-  "Reutilize a água da chuva."
+  "Reutilize a água da chuva.",
+  "Água é TECH, Água é POP, Água é TUDO!"
 ];
 
 const elemento = document.getElementById("frases");
