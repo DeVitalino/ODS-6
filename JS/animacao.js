@@ -16,7 +16,7 @@ const elemento = document.getElementById("frases");
 let fraseIndex = 0;
 let charIndex = 0;
 let apagando = false;
-let velocidade = 100; // velocidade da digitação
+let velocidade = 110; 
 
 function typeEffect() {
   let fraseAtual = frases[fraseIndex];

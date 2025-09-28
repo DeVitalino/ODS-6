@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="icon" href="./IMAGES/ODS64px.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 </head>
 
 <body>
@@ -52,20 +53,45 @@
     </section>
   
     <section>
-
         <h2>Projetos</h2>
 
-        <div class="projetos">
-            <div class="img-box"></div>
+        <div class="carousel-container">
+            <button class="carousel-btn left"><i class="fa-solid fa-chevron-left"></i></button>
 
-            <div>
-                <h3>Projeto de Reaproveitamento de Água</h3>
-                <p>Assuma a gestão de projetos de reaproveitamento de água para comunidades.</p>
-            </div>
+        <div class="carousel-track">
+        <!-- Card Domésticos -->
+            <a href="projdom.html" class="card-projeto">
+                <div class="img-box">
+                    <i class="fa-solid fa-house"></i>
+                </div>
         
+                <h3>Projetos Domésticos</h3>
+            </a>
+
+      <!-- Card Comunitários -->
+            <a href="projcom.html" class="card-projeto">
+                <div class="img-box">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+                
+                <h3>Projetos Comunitários</h3>
+            </a>
+
+      <!-- Card Educativos -->
+            <a href="projedu.html" class="card-projeto">
+                <div class="img-box">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+        
+                <h3>Projetos Educativos</h3>
+            </a>
+
         </div>
-  
+
+            <button class="carousel-btn right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
     </section>
+  
 
     <section id="comentarios">
 
@@ -94,12 +120,6 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
   import { getDatabase, ref, push, onValue, update } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
-
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
     apiKey: "AIzaSyB6r-hKId6W_2nZ7v23zJXLIihCIS2hIXY",
     authDomain: "ods6-a4985.firebaseapp.com",
@@ -114,11 +134,12 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 
-  const db = getDatabase(); // Conecta ao Realtime Database
+  const db = getDatabase(); 
 
 </script>
 
 <script src="./JS/feedback.js"></script>
+<script src="./JS/carrossel.js"></script>
 
 </body>
 </html>

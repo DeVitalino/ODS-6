@@ -45,14 +45,14 @@ button:hover {
 #answers {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* espaço entre os botões */
+  gap: 10px; 
 }
 
 #answers button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* ícone ou número da resposta */
+  gap: 10px; 
   width: 100%;
   padding: 14px;
   font-size: 1rem;
@@ -71,13 +71,13 @@ button:hover {
 
 /* Resposta correta ou errada */
 .correct {
-  background: #c8f7c5 !important; /* verde */
+  background: #c8f7c5 !important; 
   border-color: #3c763d !important;
   color: #003300 !important;
 }
 
 .wrong {
-  background: #f7c5c5 !important; /* vermelho */
+  background: #f7c5c5 !important; 
   border-color: #763d3d !important;
   color: #330000 !important;
 }
@@ -117,7 +117,7 @@ button:hover {
 #ranking li {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* medalha esquerda, nome centro, pontos direita */
+  justify-content: space-between;
   padding: 10px 16px;
   border-radius: 12px;
   background: #f1f9ff;
