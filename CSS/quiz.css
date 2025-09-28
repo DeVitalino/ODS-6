@@ -1,36 +1,36 @@
 /* ================= QUIZ SCREEN ================= */
 #quiz-screen {
-  max-width: 700px;       /* aumenta o tamanho do container */
+  max-width: 700px;    
   width: 90%;
   margin: 2rem auto;
-  padding: 2rem 2rem 4rem 2rem; /* mais espaço interno, especialmente abaixo */
-  background: #f0f8ff;    /* leve tom azul claro para contraste */
+  padding: 2rem 2rem 4rem 2rem; 
+  background: #f0f8ff;   
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   text-align: center;
   font-size: 1rem;
-  color: #003366;          /* cor do texto mais escura */
+  color: #003366;        
 }
 
 /* Pergunta */
 #question {
-  font-size: 1.4rem;       /* aumenta o tamanho da pergunta */
+  font-size: 1.4rem;    
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #002244;          /* escurece a letra da pergunta */
+  color: #002244;        
 }
 
 /* Botões de resposta */
 #answers button {
-  font-size: 1.1rem;       /* deixa os textos das respostas maiores */
-  padding: 16px;           /* mais espaço interno */
-  color: #003366;          /* texto escuro */
+  font-size: 1.1rem;
+  padding: 16px;          
+  color: #003366;         
   background: #e0f0ff;     
   border: 2px solid #003366;
 }
 
 #answers button:hover {
-  background: #cce5ff;     /* leve destaque ao passar o mouse */
+  background: #cce5ff;    
 }
 
 /* Barra de tempo */
@@ -41,7 +41,7 @@
 }
 
 #progress {
-  background: linear-gradient(90deg, #ff4d4d, #cc0000); /* vermelho mais forte */
+  background: linear-gradient(90deg, #ff4d4d, #cc0000);
   height: 100%;
   transform-origin: left;
 }
@@ -248,7 +248,7 @@ footer {
   }
 
   h1, h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   #start-screen input {
@@ -257,37 +257,42 @@ footer {
   }
 
   button {
-    font-size: 1rem;
+    font-size: 0.95rem;
     width: 100%;
-    padding: 12px;
-  }
-
-  #answers button {
-    font-size: 1rem;
-    padding: 14px;
-  }
-
-  #ranking {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #quiz-container {
-    padding: 1rem;
-  }
-
-  h1, h2 {
-    font-size: 1.2rem;
-  }
-
-  button {
-    font-size: 0.95rem;
     padding: 10px;
   }
 
   #answers button {
     font-size: 0.95rem;
     padding: 12px;
+  }
+  
+
+  #ranking {
+    font-size: 0.95rem;
+  }
+
+  .review-table li {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .correct-answer, 
+  .wrong-answer {
+    display: block;   
+    margin-top: 4px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-table li {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .correct-answer, 
+  .wrong-answer {
+    font-size: 0.85rem;
   }
 }
