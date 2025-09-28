@@ -1,3 +1,52 @@
+/* ================= QUIZ SCREEN ================= */
+#quiz-screen {
+  max-width: 700px;       /* aumenta o tamanho do container */
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2rem 2rem 4rem 2rem; /* mais espaço interno, especialmente abaixo */
+  background: #f0f8ff;    /* leve tom azul claro para contraste */
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  font-size: 1rem;
+  color: #003366;          /* cor do texto mais escura */
+}
+
+/* Pergunta */
+#question {
+  font-size: 1.4rem;       /* aumenta o tamanho da pergunta */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #002244;          /* escurece a letra da pergunta */
+}
+
+/* Botões de resposta */
+#answers button {
+  font-size: 1.1rem;       /* deixa os textos das respostas maiores */
+  padding: 16px;           /* mais espaço interno */
+  color: #003366;          /* texto escuro */
+  background: #e0f0ff;     
+  border: 2px solid #003366;
+}
+
+#answers button:hover {
+  background: #cce5ff;     /* leve destaque ao passar o mouse */
+}
+
+/* Barra de tempo */
+.timer-bar {
+  height: 16px;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+#progress {
+  background: linear-gradient(90deg, #ff4d4d, #cc0000); /* vermelho mais forte */
+  height: 100%;
+  transform-origin: left;
+}
+
+
 /* ================= CONTAINER ================= */
 #quiz-container {
   background: white;
@@ -148,6 +197,48 @@ button:hover {
 .gold { color: #FFD700; }
 .silver { color: #C0C0C0; }
 .bronze { color: #CD7F32; }
+
+/* ================= REVISÃO DE RESPOSTAS ================= */
+.review-table {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.review-table li {
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #f1f9ff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-weight: 500;
+}
+
+.correct-answer {
+  color: green;
+  font-weight: bold;
+}
+
+.wrong-answer {
+  color: red;
+  font-weight: bold;
+}
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 1000;
+}
 
 /* ================= RESPONSIVO ================= */
 @media (max-width: 768px) {

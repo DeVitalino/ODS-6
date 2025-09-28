@@ -5,7 +5,7 @@ const frases = [
   "Reaproveite a água sempre que puder.",
   "Use balde, não a mangueira.",
   "Regue as plantas de manhã cedo ou à noite.",
-  "Lave o carro com consciência. Use um balde",
+  "Lave o carro com consciência. Use um balde.",
   "Água é vida, cuide dela.",
   "Cinco minutos de banho já bastam.",
   "Reutilize a água da chuva.",
