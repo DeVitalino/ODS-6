@@ -85,14 +85,11 @@
     <!-- FORMULÁRIO DE COMENTÁRIOS -->
     <section id="comentarios">
       <form name="comentarios" method="POST" data-netlify="true" netlify>
-        <!-- Campo obrigatório para Netlify Forms -->
+        
         <input type="hidden" name="form-name" value="comentarios">
         
         <input type="text" name="nome" placeholder="Seu nome" required>
         <textarea name="mensagem" placeholder="Compartilhe sua ideia ou experiência" required></textarea>
-
-        <!-- Captcha opcional -->
-        <!-- <div data-netlify-recaptcha="true"></div> -->
 
         <div data-netlify-honeypot="bot-field" hidden></div>
 
