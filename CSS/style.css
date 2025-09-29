@@ -219,109 +219,92 @@ section h2 {
   border-radius: 8px;
 }
 
-/* ================= COMENTÁRIOS ================= */
+/* ===== FORMULÁRIO DE COMENTÁRIOS ===== */
 #comentarios {
-  margin: 2rem auto;
   max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #comentarios h2 {
-  margin-bottom: 1rem;
-  color: #003366;
+  text-align: center;
+  color: #0077cc;
+  margin-bottom: 20px;
 }
 
-#comentario-form {
+#comentario-form,
+#comentarios form {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 15px;
 }
 
-#comentario-form input, 
-#comentario-form textarea {
-  padding: 10px;
-  border-radius: 8px;
+#comentarios input,
+#comentarios textarea {
+  width: 100%;
+  padding: 12px;
   border: 1px solid #ccc;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+#comentarios input:focus,
+#comentarios textarea:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 6px rgba(0,119,204,0.4);
   outline: none;
-  transition: border 0.3s;
 }
 
-#comentario-form input:focus,
-#comentario-form textarea:focus {
-  border-color: #003366;
+#comentarios textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
-#comentario-form button {
-  align-self: flex-end;
-  padding: 10px 16px;
+#comentarios button {
+  padding: 12px;
+  background: #0077cc;
+  color: #fff;
+  font-size: 16px;
   border: none;
   border-radius: 8px;
-  background: #003366;
-  color: #fff;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-#comentario-form button:hover {
-  background: #0055aa;
+#comentarios button:hover {
+  background: #005fa3;
 }
 
-#lista-comentarios {
-  list-style: none;
-  padding: 0;
-}
-
-#lista-comentarios li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  background: #f1f9ff;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 8px;
-  position: relative;
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #003366;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Mensagem de sucesso (se quiser usar depois) */
+#success-message {
+  text-align: center;
+  color: green;
+  margin-top: 10px;
   font-weight: bold;
-  flex-shrink: 0;
 }
 
-.comentario-conteudo {
-  flex: 1;
+/* Responsividade */
+@media (max-width: 480px) {
+  #comentarios {
+    padding: 15px;
+  }
+  
+  #comentarios input,
+  #comentarios textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #comentarios button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
-.comentario-conteudo strong {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 0.95rem;
-}
-
-.data {
-  font-size: 0.75rem;
-  color: #555;
-}
-
-.like-btn {
-  cursor: pointer;
-  font-size: 0.9rem;
-  color: #888;
-  transition: color 0.2s;
-  margin-left: 10px;
-}
-
-.like-btn.liked {
-  color: #e6b800; 
-}
 
 /* ================= FOOTER ================= */
 footer {

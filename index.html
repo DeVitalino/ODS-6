@@ -21,11 +21,9 @@
             </div>
         </a>
         
-            
         <div class="quem-somos">
             <a href="sobre.html"><i class="fa-solid fa-user"></i><span class="qs-text"> Quem Somos?</span></a>
         </div>
-
     </header>
 
     <section class="hero">
@@ -37,85 +35,80 @@
 
   <!-- MISSÕES -->
     <section>
-
         <h2>Missões</h2>
-    
         <div class="missoes">
             <a href="./quiz.html">
                 <div class="card">
-                    
                     <h3>Quiz <i class="fa-solid fa-question"></i></h3>
                     <p>Quanto você sabe sobre o uso da água?</p>
                 </div>
             </a>
-            
         </div>
     </section>
   
     <section>
         <h2>Projetos</h2>
-
         <div class="carousel-container">
             <button class="carousel-btn left"><i class="fa-solid fa-chevron-left"></i></button>
 
-        <div class="carousel-track">
-        <!-- Card Domésticos -->
-            <a href="projdom.html" class="card-projeto">
-                <div class="img-box">
-                    <i class="fa-solid fa-house"></i>
-                </div>
-        
-                <h3>Projetos Domésticos</h3>
-            </a>
+            <div class="carousel-track">
+                <!-- Card Domésticos -->
+                <a href="projdom.html" class="card-projeto">
+                    <div class="img-box">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <h3>Projetos Domésticos</h3>
+                </a>
 
-      <!-- Card Comunitários -->
-            <a href="projcom.html" class="card-projeto">
-                <div class="img-box">
-                    <i class="fa-solid fa-people-group"></i>
-                </div>
-                
-                <h3>Projetos Comunitários</h3>
-            </a>
+                <!-- Card Comunitários -->
+                <a href="projcom.html" class="card-projeto">
+                    <div class="img-box">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3>Projetos Comunitários</h3>
+                </a>
 
-      <!-- Card Educativos -->
-            <a href="projedu.html" class="card-projeto">
-                <div class="img-box">
-                    <i class="fa-solid fa-book-open-reader"></i>
-                </div>
-        
-                <h3>Projetos Educativos</h3>
-            </a>
-
-        </div>
+                <!-- Card Educativos -->
+                <a href="projedu.html" class="card-projeto">
+                    <div class="img-box">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h3>Projetos Educativos</h3>
+                </a>
+            </div>
 
             <button class="carousel-btn right"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </section>
   
 
+    <!-- FORMULÁRIO DE COMENTÁRIOS -->
     <section id="comentarios">
+      <form name="comentarios" method="POST" data-netlify="true" netlify>
+        <!-- Campo obrigatório para Netlify Forms -->
+        <input type="hidden" name="form-name" value="comentarios">
+        
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <textarea name="mensagem" placeholder="Compartilhe sua ideia ou experiência" required></textarea>
 
-        <h2>Comentários da comunidade</h2>
-        <form id="comentario-form">
-            <input type="text" id="nome" placeholder="Seu nome" required>
-            <textarea id="mensagem" placeholder="Compartilhe sua ideia ou experiência" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+        <!-- Captcha opcional -->
+        <!-- <div data-netlify-recaptcha="true"></div> -->
 
-        <ul id="lista-comentarios"></ul>
+        <div data-netlify-honeypot="bot-field" hidden></div>
+
+        <button type="submit">Enviar</button>
+      </form>
     </section>
 
 
   <!-- FOOTER -->
   <footer>
-
     <p>&copy; 2025 Projeto ODS 6 - Unijorge</p>
   </footer>
 
 
 <script src="./JS/animacao.js"></script>
 <script src="./JS/carrossel.js"></script>
-<script src="./JS/feedback.js"></script>
 
 </body>
 </html>
